@@ -45,8 +45,8 @@ Deployment
    2. Within the `processing` directory, edit `go.mod`:
       1. Delete the line that starts with `replace github.com/cryptix-network/cryptixd`
       2. Set your desired cryptixd version in the line under `require` that starts with `github.com/cryptix-network/cryptixd`
-   3. Within the `processing` directory, run `go build -o  kgi-processing .`. This will produce an executable file named `kgi-processing`
-   4. Copy `kgi-processing` and `database` directory (also within the `processing` directory) to wherever you wish to run the node from
+   3. Within the `processing` directory, run `go build -o  cgi-processing .`. This will produce an executable file named `cgi-processing`
+   4. Copy `cgi-processing` and `database` directory (also within the `processing` directory) to wherever you wish to run the node from
 3. Build `api`
    1. Make sure the nodejs build environment is set up by running `npm version`
    2. Within the `api` directory, run: `npm install`
@@ -61,14 +61,14 @@ Deployment
    4. Within the `web` directory, run: `npm run build`
    5. Copy the entire `web` directory to wherever you wish to run the `web` server from
 5. Run `processing`
-   1. Navigate to wherever you copied `kgi-processing` and `database` to
+   1. Navigate to wherever you copied `cgi-processing` and `database` to
    2. Set the following environment variables:
       1. POSTGRES_USER=username
       2. POSTGRES_PASSWORD=password
       3. POSTGRES_DB=database-name
       4. POSTGRES_HOST=database.example.com
       5. POSTGRES_PORT=5432
-   3. Run: `kgi-processing --connection-string=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}?sslmode=disable`
+   3. Run: `cgi-processing --connection-string=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}?sslmode=disable`
 6. Run `api`
    1. Navigate to wherever you copied `api` to 
    2. Run: `npm run start`

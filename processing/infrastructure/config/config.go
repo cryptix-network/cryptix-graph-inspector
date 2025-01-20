@@ -17,11 +17,11 @@ import (
 )
 
 const (
-	appDataDirectory      = "kgi-processing"
+	appDataDirectory      = "cgi-processing"
 	defaultLogDirname     = "logs"
 	defaultLogLevel       = "info"
-	defaultLogFilename    = "kgi-processing.log"
-	defaultErrLogFilename = "kgi-processing_err.log"
+	defaultLogFilename    = "cgi-processing.log"
+	defaultErrLogFilename = "cgi-processing_err.log"
 )
 
 var (

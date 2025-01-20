@@ -274,8 +274,8 @@ func (p *Processing) resyncVirtualSelectedParentChain(databaseTransaction *pg.Tx
 	virtualSelectedParentChain, err := p.cryptixd.Domain().Consensus().GetVirtualSelectedParentChainFromBlock(highestBlockHash)
 	if err != nil {
 		if database.IsNotFoundError(err) {
-			// This may occur when restoring a kgi database on a system which cryptixd database
-			// is older than the kgi database.
+			// This may occur when restoring a cgi database on a system which cryptixd database
+			// is older than the cgi database.
 			log.Errorf("Could not get virtual selected parent chain from block %s: %s", highestBlockHash, err)
 			return nil
 		}

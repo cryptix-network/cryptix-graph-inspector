@@ -10,7 +10,7 @@ function parseBoolean(value: string | undefined, defaultValue: boolean): boolean
     return defaultValue;
 }
 
-const target = document.getElementById('kgi-root') as HTMLDivElement | null;
+const target = document.getElementById('cgi-root') as HTMLDivElement | null;
 if (target) {
     const interactive = parseBoolean(target.dataset["interactive"], false);
     const root = ReactDOM.createRoot(target!);
